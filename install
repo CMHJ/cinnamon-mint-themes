@@ -8,3 +8,6 @@ dir=$(pwd)
 # Install mint themes repo
 cd mint-themes && make && sudo cp -r usr/share/themes/* /usr/share/themes
 cd "$dir"
+
+# Install mint Y icons repo
+sudo cp -r mint-y-icons/usr/share/icons/* /usr/share/icons
