@@ -1,4 +1,11 @@
 #!/bin/sh
 
+# Check if deps installed
+[ -n "$(which "sassc")" ] && exit 0
+
+# Else install them
 [ -n "$(which "pacman")" ]  && sudo pacman -Sy sassc && exit 0
 [ -n "$(which "apt")" ]  && sudo apt update && sudo apt install -y sassc && exit 0
+
+echo "Please install sassc before running the install script."
+exit 1
