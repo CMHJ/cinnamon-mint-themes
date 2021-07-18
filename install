@@ -5,5 +5,6 @@ dir=$(pwd)
 # Check for sassc and install dependencies if not installed
 [ -z "$(which "sassc")" ] && ./configure
 
+# Install mint themes repo
 cd mint-themes && make && sudo cp -r usr/share/themes/* /usr/share/themes
 cd "$dir"
